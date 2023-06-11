@@ -1,2 +1,1 @@
-# Pluvo
-Pluvo is an independent language learning app designed to teach language through practical daily use.
+Pluvo is an independent language learning app that I created to fill a void in the language learning industry. Language learning apps are almost always complicated and packed with unnecessary features that crowd the user with options. Pluvo (translating to "rain" in Esperanto) is a simplistic, clean app designed to immerse the user in the practical use and culture of a language with simple, daily-use tools such as weather data and notetaking. Pluvo is currently in open alpha version 0.0.1 and is available for free, ad-free public use forever on Android.
