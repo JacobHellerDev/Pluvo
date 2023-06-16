@@ -1,3 +1,7 @@
+// first subcomponent from "home"
+
+// TODO : fix bug where sometimes high and low temperature labels switch titles or locations
+
 import React, { useEffect, useState } from 'react'
 import { Button, View, Text, Alert, StyleSheet, ActivityIndicator, ScrollView, TouchableOpacity } from 'react-native'
 import * as Location from 'expo-location'
