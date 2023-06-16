@@ -1,3 +1,7 @@
+// page displays upon app runtime execution
+
+// in the future this should be replaced with async first run detection for onboarding and returning users should have a separate home screen
+
 import React from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
 
