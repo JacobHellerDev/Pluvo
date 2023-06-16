@@ -1,3 +1,9 @@
+// navigation hub for end user in specified language, though there is no language specification at this time
+
+// initial home page release with text at the bottom to inform the user of app state
+
+// in the future this process should be streamlined
+
 import React from 'react'
 import { Text, Button, View, StyleSheet } from 'react-native'
 
