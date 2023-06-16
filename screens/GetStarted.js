@@ -1,3 +1,7 @@
+// simple text and navigation page to display app info to end user
+
+// fully static text display, modify text elements
+
 import React from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
 
