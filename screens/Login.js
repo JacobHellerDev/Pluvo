@@ -1,3 +1,7 @@
+// returning user app settings specification page
+
+// in future versions this will be replaced with async accounts and a settings page
+
 import React from 'react'
 import { Text, TextInput, Button, View, StyleSheet } from 'react-native'
 import { SelectList } from 'react-native-dropdown-select-list'
