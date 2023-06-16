@@ -1,5 +1,6 @@
 // app.js executes on runtime at launch
 // main navigation system imports and execution
+
 // this is static code which renders no components
 
 import React from 'react'
