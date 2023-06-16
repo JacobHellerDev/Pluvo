@@ -1,3 +1,6 @@
+// app.js executes on runtime at launch
+// main navigation system imports and execution
+
 import React from 'react'
 import { View } from 'react-native'
 import { StatusBar } from 'expo-status-bar';
