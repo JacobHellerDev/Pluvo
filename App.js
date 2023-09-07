@@ -66,6 +66,11 @@ const Pluvo = () => {
   );
 }
 
+// TODO
+// test function to render individual components in dev environment
+// should not be included in final package, possibly add an import and flag variable for this function for devs
+// could also put the entire app function inside a package with a flag var for what jsx component to render
+              
 const Test = () => {
   return (
     <Text />
