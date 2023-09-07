@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react'
 import { Text, StyleSheet, TouchableOpacity, View, Alert, ActivityIndicator } from 'react-native'
 import * as Location from 'expo-location'
 
+// RAW API KEY Alpha only, dev sourced
+// Remove on Play Store launch
 const openWeatherKey = '37a57a63ce85d6853e89e8f4b73e1e4e'
 
 const WeatherMinMax_DE = ({ navigation }) => {
