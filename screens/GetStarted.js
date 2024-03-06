@@ -1,6 +1,10 @@
 // simple text and navigation page to display app info to end user
 
 // fully static text display, modify text elements
+// end user can press anywhere on text field (screen) to continue through this page
+// TODO ! potentially expand clickable area to a more efficient use of the full scalable screen space
+
+// We should continue to utilize react-native-async-storage for verification of first time launch to mitigate excess onboarding
 
 import React from 'react'
 import { Text, View, StyleSheet, Button } from 'react-native'
