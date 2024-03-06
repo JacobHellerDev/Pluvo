@@ -5,6 +5,8 @@ import React, { useEffect, useState } from 'react'
 import { Text, StyleSheet, TouchableOpacity, View, Alert, ActivityIndicator } from 'react-native'
 import * as Location from 'expo-location'
 
+// openweather API key from dev account is not secure
+// TODO ! utilize end machine encrypted key in end user APK or flexible cloud API keys
 const openWeatherKey = '37a57a63ce85d6853e89e8f4b73e1e4e'
 
 const WeatherType_DE = ({ navigation }) => {
