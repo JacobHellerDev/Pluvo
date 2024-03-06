@@ -1,4 +1,7 @@
-// app.js executes on runtime at launch
+
+// End Machine Pluvo APK
+
+// --> app.js executes on runtime at launch
 // main navigation system imports and execution
 
 // this is static code which renders no components
@@ -15,13 +18,16 @@ import Login from './screens/Login.js'
 import WeatherGerman from './screens/WeatherGerman.js'
 import HomeGerman from './screens/HomeGerman.js'
 
-// GERMAN weather screen imports
+// GERMAN weather screen imports, _DE suffix only
 import WeatherType_DE from './screens/weather_components/WeatherType_DE.js'
 import WeatherTemp_DE from './screens/weather_components/WeatherTemp_DE.js'
 import WeatherMinMax_DE from './screens/weather_components/WeatherMinMax_DE.js'
 import WeatherData_DE from './screens/weather_components/WeatherData_DE.js'
 
+// Initialize React Native Stack Navigator as object of class
 const Stack = createNativeStackNavigator()
+
+// Return main app JSX as function Pluvo
 
 const Pluvo = () => {
   return (
@@ -66,11 +72,14 @@ const Pluvo = () => {
   );
 }
 
-// TODO
+// TODO !
 // test function to render individual components in dev environment
 // should not be included in final package, possibly add an import and flag variable for this function for devs
 // could also put the entire app function inside a package with a flag var for what jsx component to render
-              
+
+// --> active test component is in final end machine APK
+// utilize by export default Test
+
 const Test = () => {
   return (
     <Text />
