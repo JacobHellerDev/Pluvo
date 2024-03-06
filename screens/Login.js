@@ -1,6 +1,8 @@
 // returning user app settings specification page
 
-// in future versions this will be replaced with async accounts and a settings page
+// TODO ! this should be replaced with async accounts and a settings page
+// --> we can react-native-async-storage user preferences and have an opt-out option for users to change preferences
+// react-native-async-storage is already downloaded to the end machine APK so we should use that
 
 import React from 'react'
 import { Text, TextInput, Button, View, StyleSheet } from 'react-native'
