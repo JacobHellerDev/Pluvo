@@ -4,8 +4,9 @@ import React, { useEffect, useState } from 'react'
 import { Text, StyleSheet, TouchableOpacity, View, Alert, ActivityIndicator } from 'react-native'
 import * as Location from 'expo-location'
 
-// RAW API KEY Alpha only, dev sourced
-// Remove on Play Store launch
+// TODO ! this is a raw api key taken from a dev api account, which we have to consider a security vulnerability
+// TODO ! remove and add either encrypted dev api key in end user APK or store flexible cloud API key
+// TODO ! source API key from openweather specifically because the API calls in the jsx are not gonna work without it
 const openWeatherKey = '37a57a63ce85d6853e89e8f4b73e1e4e'
 
 const WeatherMinMax_DE = ({ navigation }) => {
@@ -14,16 +15,25 @@ const WeatherMinMax_DE = ({ navigation }) => {
 
     const loadForecast = async () => {
         setRefreshing(true)
-        // ask for permission to access location
+        
+        // TODO ! asking for permission to use the user location
+        // TODO ! because of the openweather API's requirement for a location
+        // --> we need a fallback if end user declines location permission
+        
         const { status } = await Location.requestForegroundPermissionsAsync()
         if (status !== 'granted') {
             Alert.alert('Permission to access location was denied')
         }
 
-        // get the current location
+        // fetch the current end user location
+        // TODO ! end user may experience unexpected crashing if they have previously declined location permission
+        // --> not a fatal bug; location permissions can be regranted in end user device settings
         let location = await Location.getCurrentPositionAsync({enableHighAccuracy: true})
 
-        // fetch weather data from openweathermap api
+        // utilize user-granted location to fetch openweather api data
+        // --> this is a free API call atm, but we should be upgrading to a more accurate API
+        // TODO ! roadmap advanced weather API
+        
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${location.coords.latitude}&lon=${location.coords.longitude}&lang=de&units=imperial&appid=${openWeatherKey}`)
         const data = await response.json() // convert the api response to json
 
@@ -41,6 +51,9 @@ const WeatherMinMax_DE = ({ navigation }) => {
     },[])
 
     // loading screen to render before api hook is acknowledged
+    // we do see potential errors with loading animations if the device is not configured with location permissions
+    // ! TODO utilize device event listener to ensure we can load this effectively
+    
     if(!forecast){
         return (
             <View style={styles.loadingWrapper}>
@@ -72,6 +85,8 @@ const WeatherMinMax_DE = ({ navigation }) => {
         </View>
     )
 }
+
+// stylesheet
 
 const styles = StyleSheet.create({
     text: {
