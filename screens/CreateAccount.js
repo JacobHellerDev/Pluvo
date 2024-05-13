@@ -2,6 +2,22 @@
 
 // in future versions this will be replaced with async accounts and a settings page
 
+
+// ************
+// !!! TODO !!!
+// ************
+// COMMIT ASYNC ACCOUNTS TO MITIGATE THE FOLLOWING OFFLINE SECURITY VULNERABILITIES:
+// 1: APP.js > self() is not hyperlinked to online storage through react async
+// 2: SELF.js (in: self()) is not hyperlinked intrinsically to href:react//async
+// 3: Data cannot be reliably stored online or through cloud storage and be recalled offline which should develop:
+
+// Async fetch for data stored for user information
+
+
+
+
+
+
 import React from 'react'
 import { Text, TextInput, Button, View, StyleSheet } from 'react-native'
 import { SelectList } from 'react-native-dropdown-select-list'
