@@ -7,6 +7,7 @@
 // main navigation system imports and execution
 
 // this is static code which renders no components
+// >>
 
 import React from 'react'
 import { View } from 'react-native'
@@ -26,7 +27,7 @@ import WeatherTemp_DE from './screens/weather_components/WeatherTemp_DE.js'
 import WeatherMinMax_DE from './screens/weather_components/WeatherMinMax_DE.js'
 import WeatherData_DE from './screens/weather_components/WeatherData_DE.js'
 
-// Initialize React Native Stack Navigator as object of class
+// Initialize React Native Stack Navigator as object of type class
 const Stack = createNativeStackNavigator()
 
 // Return main app JSX as function Pluvo
@@ -74,13 +75,7 @@ const Pluvo = () => {
   );
 }
 
-// TODO !
-// test function to render individual components in dev environment
-// should not be included in final package, possibly add an import and flag variable for this function for devs
-// could also put the entire app function inside a package with a flag var for what jsx component to render
-
-// --> active test component is in final end machine APK
-// utilize by export default Test
+// idk what this means
 
 const Test = () => {
   return (
